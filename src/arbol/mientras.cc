@@ -12,6 +12,7 @@ Retorno* Mientras::ejecutar(TablaDeSimbolos *ts){
         for(list <Instruccion*> :: iterator it = this->instrucciones.begin(); it != this->instrucciones.end(); ++it) {
             (*it)->ejecutar(tablaLocal);
 	    }
+        delete tablaLocal;
     }
     return NULL;
 }

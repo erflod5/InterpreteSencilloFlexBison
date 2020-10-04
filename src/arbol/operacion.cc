@@ -21,10 +21,6 @@ Operacion::Operacion(std::string* valor, TipoOperacion tipo){
     this->tipo = tipo;
 }
 
-Operacion::~Operacion(){
-    //free(this);
-}
-
 Retorno* Operacion::ejecutar(TablaDeSimbolos *ts){
     Retorno *ret = new Retorno;
     if(this->tipo == SUMA){

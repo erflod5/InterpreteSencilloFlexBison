@@ -18,6 +18,7 @@ Retorno* If::ejecutar(TablaDeSimbolos *ts){
         for(list <Instruccion*> :: iterator it = this->instrucciones.begin(); it != this->instrucciones.end(); ++it) {
             (*it)->ejecutar(tablaLocal);
 	    }
+        delete tablaLocal;
     }
     else{
         if(this->instruccionesElse.size() > 0){
@@ -26,6 +27,7 @@ Retorno* If::ejecutar(TablaDeSimbolos *ts){
             for(list <Instruccion*> :: iterator it = this->instruccionesElse.begin(); it != this->instruccionesElse.end(); ++it) {
                 (*it)->ejecutar(tablaLocal);
 	        }
+            delete tablaLocal;
         }
     }
     return NULL;
